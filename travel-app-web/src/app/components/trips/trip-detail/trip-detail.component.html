@@ -1,0 +1,21 @@
+<div class="container my-3">
+  <h2>{{trip.name}}</h2>
+</div>
+
+
+<div class="container my-3">
+  <div class="card-body">
+    <p class="card-text">{{trip.description}}</p>
+    <!-- <button class="card-link">See POIs</button> -->
+      <a [routerLink]="['edit']" class="card-link">Edit Trip</a>
+  </div>
+
+  <div class="row" >
+      <div class="col-6 mb-3" *ngFor="let image of trip.gallery">
+          <img [src]="image">
+      </div>    
+    </div>    
+    
+</div>
+
+

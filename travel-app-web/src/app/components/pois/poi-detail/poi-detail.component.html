@@ -1,0 +1,32 @@
+<agm-map [latitude]="poi.location[0]" [longitude]="poi.location[1]">
+    <agm-marker [latitude]="poi.location[0]" [longitude]="poi.location[1]"></agm-marker>
+</agm-map>
+
+<div class="container my-3">
+
+  <h2>
+    {{poi.name}}
+
+    <span>
+        <ngb-rating rate="{{poi.rating}}" readonly  max="5"></ngb-rating>
+    </span>
+
+  </h2>
+
+  <p>{{poi.description}}</p>
+
+  <h4>      
+    <span class="badge badge-dark">{{poi.poiType}}</span>
+  </h4>
+
+  <div class="row" >
+    <div class="col-6 mb-3" *ngFor="let image of poi.gallery">
+        <img [src]="image">
+    </div>    
+  </div>    
+
+  <app-review-create></app-review-create>
+
+  <app-review-list></app-review-list>
+
+</div>

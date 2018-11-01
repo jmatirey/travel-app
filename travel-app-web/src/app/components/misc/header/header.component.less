@@ -1,0 +1,39 @@
+.nav-item {
+  cursor: pointer;
+}
+
+.dropdown-menu.bg-dark, .dropdown-menu.bg-dark .dropdown-item {
+  border: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 991px) {
+  .navbar-collapse {
+    position: absolute;
+    background-color: #343a40 !important;
+    width: 100%;
+    top: 65px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  
+    ul {
+      padding: 0 15px 10px;
+
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+  
+  .dropdown-menu {
+    padding: 0 15px;
+  
+    .dropdown-nav {
+      padding: 0;
+    }
+  }
+}
